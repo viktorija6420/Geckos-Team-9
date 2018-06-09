@@ -8,7 +8,7 @@ class FetchQuotes extends React.Component {
 
   
   render() {
-    console.log('this.state.quotes[0].quote',this.state.quotes[0].quote)
+    console.log('this.state.quotes[0].["quote"]',this.state.quotes[0]["quote"])
     return (
       <div>
         hi
