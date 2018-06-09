@@ -18,7 +18,9 @@ class FetchQuotes extends React.Component {
   
   render() {
     return (
-      <h1>Hello from the FetchQuotes component</h1>
+      <div>
+        {this.state.quotes[0].quote}
+      </div>
     )
   }
 }
