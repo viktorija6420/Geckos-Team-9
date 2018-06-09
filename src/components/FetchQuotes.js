@@ -9,10 +9,10 @@ class FetchQuotes extends React.Component {
   
   render() {
     const newQuoteObject = this.state.quotes[0]
-    console.log('newQuoteObject',newQuoteObject)
     return (
       <div>
-        hi
+         
+        <p>{newQuoteObject.quote}</p>
       </div>
     )
   }
