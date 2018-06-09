@@ -13,7 +13,7 @@ class FetchQuotes extends React.Component {
       }
     })
       .then(response => response.json())
-      .then(myJson => console.log(myJson));
+      .then(myJson => this.setState({quotes:myJson.results}));
   }
   
   render() {
