@@ -12,7 +12,7 @@ class FetchQuotes extends React.Component {
     return (
       <div>
          
-        <p>{newQuoteObject.quote}</p>
+        <p>{console.log(newQuoteObject)}</p>
       </div>
     )
   }
