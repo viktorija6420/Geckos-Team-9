@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Button } from "reactstrap";
 import { Alert } from "reactstrap";
+import FetchQuotes from  "./components/FetchQuotes"
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Alert color="primary">The application has boostrap installed.. Woola!! </Alert>
+        <FetchQuotes />
       </div>
     );
   }
