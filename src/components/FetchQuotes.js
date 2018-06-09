@@ -6,6 +6,16 @@ class FetchQuotes extends React.Component {
     quotes: []
   }
 
+  
+  render() {
+    console.log(this.state.quotes[0][quote])
+    return (
+      <div>
+        hi
+      </div>
+    )
+  }
+
   componentDidMount() {
     fetch("https://api.paperquotes.com/apiv1/quotes?tags=love&limit=5", {
       headers: {
@@ -15,15 +25,7 @@ class FetchQuotes extends React.Component {
       .then(response => response.json())
       .then(myJson => this.setState({quotes:myJson.results}));
   }
-  
-  render() {
-    console.log(this.state.quotes)
-    return (
-      <div>
-        hi
-      </div>
-    )
-  }
+
 }
 
 export default FetchQuotes
