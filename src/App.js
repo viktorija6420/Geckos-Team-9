@@ -6,6 +6,8 @@ import { Alert } from "reactstrap";
 import FetchQuotes from  "./components/FetchQuotes"
 
 class App extends Component {
+ 
+ 
   render() {
     return (
       <div className="App">
