@@ -3,6 +3,7 @@ import React from 'react'
 class FetchQuotes extends React.Component {
   constructor(props) {
     super(props)
+    console.log(props.quotes)
   }
   
   
@@ -10,7 +11,7 @@ class FetchQuotes extends React.Component {
     return (
       <div>
          
-        <p>{console.log(this.props.quotes)}</p>
+        <p></p>
       </div>
     )
   }
