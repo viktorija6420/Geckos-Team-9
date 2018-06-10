@@ -9,7 +9,7 @@ class FetchQuotes extends React.Component {
     console.log(this.state.quotes)
     return (
       <div>
-        <p>hi</p>
+        <p>{this.state.quotes[0].quote}</p>
       </div>
     );
   }
