@@ -1,14 +1,16 @@
 import React from 'react'
 
 class FetchQuotes extends React.Component {
+  constructor(props) {
+    super(props)
+  }
   
   
-  
-  render(props) {
+  render() {
     return (
       <div>
          
-        <p>{console.log(props.quotes)}</p>
+        <p>{console.log(this.props.quotes)}</p>
       </div>
     )
   }
