@@ -1,21 +1,19 @@
-import React from 'react'
+import React from "react";
 
 class FetchQuotes extends React.Component {
-
   state = {
     quotes: []
-  }
-  
+  };
+
   render() {
-    const newQuoteObject = this.state.quotes[0] ? this.state.quotes[0] : ""
+    console.log(this.state.quotes)
     return (
       <div>
-        
         <p>{newQuoteObject}</p>
       </div>
-    )
+    );
   }
- 
+
   componentDidMount() {
     fetch("https://api.paperquotes.com/apiv1/quotes?tags=love&limit=5", {
       headers: {
@@ -24,15 +22,9 @@ class FetchQuotes extends React.Component {
     })
       .then(response => response.json())
       .then(myJson => {
- const quotes = myJson.results.map(obj => obj.quote)
- this.setState({quotes})
- }
- );
+        this.setState({ quotes: myJson.results });
+      });
   }
- 
- 
-
-  
 }
 
-export default FetchQuotes
+export default FetchQuotes;
