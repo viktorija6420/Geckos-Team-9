@@ -5,7 +5,6 @@ class FetchQuotes extends React.Component {
   
   
   render(props) {
-    const newQuoteObject = this.state.quotes[0]
     return (
       <div>
          
