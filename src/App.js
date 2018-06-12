@@ -1,21 +1,38 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { Button } from "reactstrap";
-import { Alert } from "reactstrap";
+
 
 class App extends Component {
+  state = {
+    bgURL: ""
+  };
+
+  componentDidMount() {
+    fetch("https://api.unsplash.com/photos/random", {
+      headers: {
+        Authorization:
+          "Client-ID d870e34414bd653b93aba9430261a7535a80cedede08dca342de5b0424cb6f46"
+      }
+    })
+      .then(result => result.json())
+      .then(json => {
+        this.setState({ bgURL: json.urls.regular });
+      });
+  }
+
   render() {
+    const url = this.state.bgURL ? this.state.bgURL : "";
+
+    const divStyle = {
+      backgroundImage: `url(${url})`,
+      height: "100vh",
+      backgroundSize: "cover",
+      color: "white"
+    };
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to our awesome project!</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Alert color="primary">The application has boostrap installed.. Woola!! </Alert>
+        <h1 style={divStyle}> here is where the quote will</h1>
       </div>
     );
   }
